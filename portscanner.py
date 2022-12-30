@@ -1,6 +1,4 @@
-import os
 import socket
-import Ipy
 import sys
 
 addr = ""
@@ -12,19 +10,19 @@ class Portscanner:
         self.recvamt = 1024 * 1024
     
     def getInputfrmcli(self):
-        if sys.args[0].isalpha() = True:
-            addr = socket.gethostbyname(sys.args[0])
+        if sys.argv[0].isalpha() = True:
+            addr = socket.gethostbyname(sys.argv[0])
         else:
-            addr = sys.args[0]
-        port = sys.args[1]
-        timeout = sys.args[2]
+            addr = sys.argv[0]
+        port = sys.argv[1]
+        timeout = sys.argv[2]
             
     
     def getInputinteractive(self):
-        if sys.args[0].isalpha() = True:
-            addr = socket.gethostbyname(sys.args[0])
+        if sys.argv[0].isalpha() = True:
+            addr = socket.gethostbyname(sys.argv[0])
         else:
-            addr = sys.args[0]
+            addr = sys.argv[0]
         port = input("[+] Port: ")
         timeout = input("[+] Timeout(s): ")
         
