@@ -12,14 +12,22 @@ class Portscanner:
         self.recvamt = 1024 * 1024
     
     def getInputfrmcli(self):
-        addr= sys.args[0]
+        if sys.args[0].isalpha() = True:
+            addr = socket.gethostbyname(sys.args[0])
+        else:
+            addr = sys.args[0]
         port = sys.args[1]
         timeout = sys.args[2]
+            
     
     def getInputinteractive(self):
-        addr = input("[+] Address: ")
+        if sys.args[0].isalpha() = True:
+            addr = socket.gethostbyname(sys.args[0])
+        else:
+            addr = sys.args[0]
         port = input("[+] Port: ")
         timeout = input("[+] Timeout(s): ")
+        
     
     def connect(self):
         if __name__ == "__main__":
@@ -39,7 +47,10 @@ class Portscanner:
     def testconn(self):
         sock = connect()
         while sock = True:
-            sock.recv(int(self.recvamt))
+            sock.recv(int(self.recvamt)).decode()
+        else:
+            pass
+            
         
         
         
