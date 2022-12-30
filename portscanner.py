@@ -23,12 +23,23 @@ class Portscanner:
     
     def connect(self):
         if __name__ == "__main__":
+            print(">> Initiating....")
             getInputinteractive()
-            socket.create_connection((addr,port))
+            print(">>> Instantiating connection...")
+            sock = socket.create_connection((addr,port))
+            print("✓ Connected")
             socket.setdefaulttimeout(int(timeout)
         else:
+            print(">> Initiating....")
             getInputfrmcli()
-            socket.create_connection((addr,port))
+            print(">>> Instantiating connection...")
+            sock = socket.create_connection((addr,port))
+            print("✓ Connected")
             socket.setdefaulttimeout(int(timeout)
+    def testconn(self):
+        sock = connect()
+        while sock = True:
+            sock.recv(int(self.recvamt))
+        
         
         
