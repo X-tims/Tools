@@ -6,10 +6,8 @@ port = ""
 timeout = ""
 
 class Portscanner:
-    def __init__(self, recvamt):
-        self.recvamt = 1024 * 1024
     
-    def getInputfrmcli(self):
+    def getInputfrmcli():
         if sys.argv[0].isalpha() = True:
             addr = socket.gethostbyname(sys.argv[0])
         else:
@@ -18,7 +16,7 @@ class Portscanner:
         timeout = sys.argv[2]
             
     
-    def getInputinteractive(self):
+    def getInputinteractive():
         if sys.argv[0].isalpha() = True:
             addr = socket.gethostbyname(sys.argv[0])
         else:
@@ -27,7 +25,7 @@ class Portscanner:
         timeout = input("[+] Timeout(s): ")
         
     
-    def connect(self):
+    def connect():
         if __name__ == "__main__":
             print(">> Initiating....")
             getInputinteractive()
@@ -42,13 +40,14 @@ class Portscanner:
             sock = socket.create_connection((addr,port))
             print("✓ Connected")
             socket.setdefaulttimeout(int(timeout)
-    def testconn(self):
+    def testconn():
         sock = connect()
         while sock = True:
-            sock.recv(int(self.recvamt)).decode()
+            sock.send(b"TCK")
+            sock.recv(1024).decode()
         else:
             pass
             
-        
-        
-        
+           
+
+testconn()
